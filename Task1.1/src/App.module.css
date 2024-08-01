@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.dataContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 30px;
+    gap: 25px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.dataItem {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    flex: 1 1 300px;
+    min-width: 250px;
+}
+
+.dataImage {
+    width: 75px;
+    height: 75px;
+    margin-right: 20px;
+    border-radius: 50%;
+    padding: 12px;
+    border: 1px solid #f0e4e4;
+    box-sizing: border-box;
+}
+
+.dataTextContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.dataTitle {
+    margin: 0;
+    font-size: 1em;
+    color: #333333;
+}
+
+.dataDescription {
+    margin: 10px 0 0;
+    font-size: 0.8em;
+    color: #666666;
+}
+
+@media (max-width: 768px) {
+    .dataContainer {
+        gap: 20px;
+        padding: 20px;
+    }
+    .dataItem {
+        flex: 1 1 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dataImage {
+        width: 60px;
+        height: 60px;
+    }
+}

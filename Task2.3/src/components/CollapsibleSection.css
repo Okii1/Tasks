@@ -1,0 +1,148 @@
+.collapsible-section {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px auto;
+  padding: 0;
+  width: 800px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.nested-sections {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.nested-sections > .collapsible-section {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.collapsible-header {
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  background-color: #f7f6f6;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.collapsible-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: left; /* Siguro që teksti të fillojë nga ana e majtë */
+  flex: 1; /* Lejon që h3 të marrë hapësirën e mbetur */
+}
+
+.collapsible-header img.collapsible-image {
+  width: 50px; /* Madhësia e imazhit */
+  height: auto;
+  margin-right: 10px; /* Largësi nga teksti */
+  border-radius: 4px;
+}
+
+.collapsible-header button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.collapsible-header button.open {
+  transform: rotate(180deg);
+}
+
+.collapsible-content {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease-in-out;
+  display: none;
+  overflow: hidden;
+}
+
+.collapsible-content.open {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .collapsible-section {
+    width: 80%;
+  }
+
+  .collapsible-header h3 {
+    font-size: 16px;
+  }
+
+  .collapsible-header button {
+    font-size: 16px;
+  }
+
+  .collapsible-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collapsible-section {
+    width: 90%;
+  }
+
+  .collapsible-header {
+    padding: 10px;
+  }
+
+  .collapsible-header h3 {
+    font-size: 14px;
+  }
+
+  .collapsible-header button {
+    font-size: 14px;
+  }
+
+  .collapsible-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .collapsible-section {
+    width: 100%;
+  }
+
+  .collapsible-header {
+    padding: 8px;
+  }
+
+  .collapsible-header h3 {
+    font-size: 12px;
+  }
+
+  .collapsible-header button {
+    font-size: 12px;
+  }
+
+  .collapsible-content {
+    padding: 8px;
+  }
+}

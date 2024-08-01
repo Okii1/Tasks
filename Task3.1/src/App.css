@@ -1,0 +1,126 @@
+:root {
+  --font-color: #444444;
+  --background-color: #FFFFFF;
+  --button-color: #2077EF;
+  --button-border-color: #2077EF;
+  --buttons-mouseover-color: #0053D1;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--background-color);
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.App {
+  text-align: center;
+  color: var(--font-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--background-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.color-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.color-box {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.show-popup-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--font-color);
+  background: var(--button-color);
+  border: 2px solid var(--button-border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.show-popup-button:hover {
+  background: var(--buttons-mouseover-color);
+  transform: scale(1.05);
+}
+
+.show-popup-button:active {
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .show-popup-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .color-box {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .show-popup-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .color-box {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 350px) {
+  .show-popup-button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .color-box {
+    width: 80px;
+    height: 80px;
+  }
+}

@@ -1,0 +1,17 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.App {
+  font-family: sans-serif;
+  padding: 20px;
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+}
